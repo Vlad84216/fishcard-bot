@@ -5,4 +5,8 @@ services:
     plan: free
     startCommand: "python main.py"
     autoDeploy: true
-    pythonVersion: 3.10.11   # 👈 ключ, если runtime.txt не работает
+    envVars:
+      - key: BOT_TOKEN
+        value: ВСТАВЬ_СЮДА_СВОЙ_ТОКЕН
+      - key: OPENAI_API_KEY
+        value: ВСТАВЬ_СЮДА_СВОЙ_API_КЛЮЧ
