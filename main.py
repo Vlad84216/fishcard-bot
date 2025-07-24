@@ -21,29 +21,17 @@ async def estimate_fish_parameters(photo_path):
     response = openai.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {
-                "role": "system",
-                "content": "Ты эксперт по рыбалке. На основе фото оцени вес и длину рыбы. Формат строго: Вес: ... кг\nДлина: ... см"
-            },
+            {"role": "system", "content": "Ты эксперт по рыбалке. На основе фото оцени вес и длину рыбы. Формат строго: Вес: ... кг\nДлина: ... см"},
             {
                 "role": "user",
                 "content": [
-                    {
-                        "type": "text",
-                        "text": "Оцени по фото примерный вес и длину рыбы. Ответ строго:\nВес: ... кг\nДлина: ... см"
-                    },
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/jpeg;base64,{image_base64}"
-                        }
-                    }
+                    {"type": "text", "text": "Оцени по фото примерный вес и длину рыбы. Ответ строго:\nВес: ... кг\nДлина: ... см"},
+                    {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}}
                 ]
             }
         ],
         max_tokens=100
     )
-
     return response.choices[0].message.content
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
