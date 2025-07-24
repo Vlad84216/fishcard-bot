@@ -1,4 +1,3 @@
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import os
 import openai
 import base64
