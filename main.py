@@ -5,6 +5,12 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 openai.api_key = os.environ["OPENAI_API_KEY"]
+
+openai.proxy = {
+    "http": "http://ddemoipl:zkv01bcgs6pz@23.95.150.145:6114",
+    "https": "http://ddemoipl:zkv01bcgs6pz@23.95.150.145:6114"
+}
+
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 
 async def estimate_fish_parameters(photo_path):
