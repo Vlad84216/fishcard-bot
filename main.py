@@ -1,2 +1,1 @@
-import telegram
-print("telegram version:", telegram.__version__)
+# фиктивный коммит для перезапуска деплоя
