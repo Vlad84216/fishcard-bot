@@ -6,8 +6,3 @@ services:
     buildCommand: ""
     startCommand: "python main.py"
     autoDeploy: true
-    envVars:
-      - key: BOT_TOKEN
-        value: ПОДСТАВЬ_ТУТ_ТОКЕН
-      - key: OPENAI_API_KEY
-        value: ПОДСТАВЬ_ТУТ_API_КЛЮЧ
