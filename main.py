@@ -4,8 +4,10 @@ import base64
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
+# Настройка API-ключа
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
+# ✅ Прокси OpenAI (добавлено)
 openai.proxy = {
     "http": "http://ddemoipl:zkv01bcgs6pz@23.95.150.145:6114",
     "https": "http://ddemoipl:zkv01bcgs6pz@23.95.150.145:6114"
